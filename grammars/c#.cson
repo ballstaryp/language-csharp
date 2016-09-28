@@ -108,7 +108,7 @@
             'name': 'storage.modifier.cs'
           '2':
             'name': 'entity.name.type.class.cs'
-        'match': '(class|struct|interface|enum)\\s+(\\w+)'
+        'match': '(class|struct|interface|enum)\\s+([\\w]+\\s*(?:<[\\w<>\\s,`?]*>)?)'
         'name': 'meta.class.identifier.cs'
       }
       {
@@ -333,7 +333,7 @@
             'include': '#builtinTypes'
           }
           {
-            'begin': '([\\w.]+)\\s*\\('
+            'begin': '([\\w]+\\s*(?:<[\\w<>\\s,`?]*>)?)\\s*\\('
             'beginCaptures':
               '1':
                 'name': 'entity.name.function.cs'
